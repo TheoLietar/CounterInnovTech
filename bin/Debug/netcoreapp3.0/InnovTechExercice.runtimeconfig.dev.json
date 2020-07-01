@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\lieta\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\lieta\\.nuget\\packages"
+    ]
+  }
+}

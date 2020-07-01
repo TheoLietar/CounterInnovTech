@@ -1,0 +1,20 @@
+﻿@using InnovTechExercice.Data;
+@using System.Threading;
+
+@inject TimerService  TimerService
+
+<h3>@TimerService.Current</h3>
+
+@code {
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        TimerService.Handler = this.OnElapsed;
+    }
+
+    public void OnElapsed()
+    {
+        TimerService.Decrement();
+        InvokeAsync(() => StateHasChanged());
+    }
+}
